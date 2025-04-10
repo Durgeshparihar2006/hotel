@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Your Stay - Luxury Haven Hotel</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Luxury Haven</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="rooms.html">Rooms</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="booking.html">Book Now</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item d-none d-lg-block ms-3">
+              <a class="btn btn-primary" href="booking.html">Book Now</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header" style="background-image: url('https://placehold.co/1920x500');">
+    <div class="container">
+      <div class="page-header-content text-center">
+        <h1 class="display-4 fw-bold text-white">Book Your Stay</h1>
+        <p class="lead text-white">Reserve your room and enjoy a luxurious experience</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Section -->
+  <section class="booking-section py-5 py-md-6 reveal">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <!-- Progress Steps -->
+          <div class="booking-progress mb-5">
+            <div class="row">
+              <div class="col-3 text-center">
+                <div class="booking-step active" id="step-indicator-1">
+                  <div class="step-number">1</div>
+                  <div class="step-label">Room & Dates</div>
+                </div>
+              </div>
+              <div class="col-3 text-center">
+                <div class="booking-step" id="step-indicator-2">
+                  <div class="step-number">2</div>
+                  <div class="step-label">Guest Details</div>
+                </div>
+              </div>
+              <div class="col-3 text-center">
+                <div class="booking-step" id="step-indicator-3">
+                  <div class="step-number">3</div>
+                  <div class="step-label">Payment</div>
+                </div>
+              </div>
+              <div class="col-3 text-center">
+                <div class="booking-step" id="step-indicator-4">
+                  <div class="step-number">4</div>
+                  <div class="step-label">Confirmation</div>
+                </div>
+              </div>
+            </div>
+            <div class="progress mt-3">
+              <div class="progress-bar bg-primary" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+
+          <!-- Booking Form Steps -->
+          <div class="booking-form">
+            <!-- Step 1: Room Selection & Dates -->
+            <div class="booking-step-content active" id="booking-step-1">
+              <div class="card">
+                <div class="card-body p-4">
+                  <h2 class="card-title h4 fw-bold mb-4">Select Room & Dates</h2>
+                  
+                  <div class="row g-4">
+                    <div class="col-md-6">
+                      <div class="mb-3">
+                        <label for="room-type" class="form-label">Room Type</label>
+                        <select class="form-select" id="room-type">
+                          <option value="">Select Room Type</option>
+                          <option value="deluxe">Deluxe Room - $199/night</option>
+                          <option value="executive">Executive Suite - $299/night</option>
+                          <option value="presidential">Presidential Suite - $499/night</option>
+                          <option value="family">Family Room - $249/night</option>
+                        </select>
+                      </div>
+                      
+                      <div class="mb-3">
+                        <label for="guests" class="form-label">Number of Guests</label>
+                        <div class="input-group">
+                          <input type="number" class="form-control" id="guests" min="1" max="4" value="2">
+                          <span class="input-group-text"><i class="fas fa-user"></i></span>
+                        </div>
+                      </div>
+                      
+                      <div class="mb-3">
+                        <label for="special-requests" class="form-label">Special Requests</label>
+                        <textarea class="form-control" id="special-requests" rows="4" placeholder="Any special requests or preferences..."></textarea>
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                      <div class="mb-3">
+                        <label for="check-in" class="form-label">Check In Date</label>
+                        <div class="input-group">
+                          <span class="input-group-text"><i class="fas fa-calendar"></i></span>
+                          <input type="date" class="form-control" id="check-in">
+                        </div>
+                      </div>
+                      
+                      <div class="mb-3">
+                        <label for="check-out" class="form-label">Check Out Date</label>
+                        <div class="input-group">
+                          <span class="input-group-text"><i class="fas fa-calendar"></i></span>
+                          <input type="date" class="form-control" id="check-out">
+                        </div>
+                      </div>
+                      
+                      <div class="price-summary p-3 bg-light rounded mt-4">
+                        <h3 class="h6 fw-bold mb-3">Price Summary</h3>
+                        <div class="d-flex justify-content-between mb-2">
+                          <span>Room Rate:</span>
+                          <span>$199 x 3 nights</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2">
+                          <span>Taxes & Fees:</span>
+                          <span>$89.55</span>
+                        </div>
+                        <hr>
+                        <div class="d-flex justify-content-between fw-bold">
+                          <span>Total:</span>
+                          <span>$686.55</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="text-end mt-4">
+                    <button type="button" class="btn btn-primary next-step" data-step="1">
+                      Continue to Guest Details <i class="fas fa-arrow-right ms-2"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Step 2: Guest Details -->
+            <div class="booking-step-content" id="booking-step-2">
+              <div class="card">
+                <div class="card-body p-4">
+                  <h2 class="card-title h4 fw-bold mb-4">Guest Details</h2>
+                  
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label for="first-name" class="form-label">First Name</label>
+                      <input type="text" class="form-control" id="first-name" required>
+                    </div>
+                    
+                    <div class="col-md-6">
+                      <label for="last-name" class="form-label">Last Name</label>
+                      <input type="text" class="form-control" id="last-name" required>
+                    </div>
+                    
+                    <div class="col-md-6">
+                      <label for="email" class="form-label">Email Address</label>
+                      <input type="email" class="form-control" id="email" required>
+                    </div>
+                    
+                    <div class="col-md-6">
+                      <label for="phone" class="form-label">Phone Number</label>
+                      <input type="tel" class="form-control" id="phone" required>
+                    </div>
+                    
+                    <div class="col-12">
+                      <label for="address" class="form-label">Address</label>
+                      <input type="text" class="form-control" id="address" required>
+                    </div>
+                    
+                    <div class="col-md-6">
+                      <label for="city" class="form-label">City</label>
+                      <input type="text" class="form-control" id="city" required>
+                    </div>
+                    
+                    <div class="col-md-6">
+                      <label for="zip" class="form-label">Zip/Postal Code</label>
+                      <input type="text" class="form-control" id="zip" required>
+                    </div>
+                    
+                    <div class="col-md-6">
+                      <label for="country" class="form-label">Country</label>
+                      <select class="form-select" id="country" required>
+                        <option value="">Select Country</option>
+                        <option value="us">United States</option>
+                        <option value="ca">Canada</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="au">Australia</option>
+                      </select>
+                    </div>
+                  </div>
+                  
+                  <div class="d-flex justify-content-between mt-4">
+                    <button type="button" class="btn btn-outline-secondary prev-step" data-step="2">
+                      Back
+                    </button>
+                    <button type="button" class="btn btn-primary next-step" data-step="2">
+                      Continue to Payment <i class="fas fa-arrow-right ms-2"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Step 3: Payment -->
+            <div class="booking-step-content" id="booking-step-3">
+              <div class="card">
+                <div class="card-body p-4">
+                  <h2 class="card-title h4 fw-bold mb-4">Payment Information</h2>
+                  
+                  <div class="row g-3">
+                    <div class="col-12">
+                      <label for="card-name" class="form-label">Name on Card</label>
+                      <input type="text" class="form-control" id="card-name" required>
+                    </div>
+                    
+                    <div class="col-12">
+                      <label for="card-number" class="form-label">Card Number</label>
+                      <div class="input-group">
+                        <input type="text" class="form-control" id="card-number" placeholder="1234 5678 9012 3456" required>
+                        <span class="input-group-text"><i class="fas fa-credit-card"></i></span>
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                      <label for="expiry" class="form-label">Expiry Date</label>
+                      <input type="text" class="form-control" id="expiry" placeholder="MM/YY" required>
+                    </div>
+                    
+                    <div class="col-md-6">
+                      <label for="cvv" class="form-label">CVV</label>
+                      <input type="text" class="form-control" id="cvv" placeholder="123" required>
+                    </div>
+                    
+                    <div class="col-12">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="terms" required>
+                        <label class="form-check-label" for="terms">
+                          I agree to the <a href="#" class="text-primary">Terms and Conditions</a> and <a href="#" class="text-primary">Privacy Policy</a>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="price-summary p-3 bg-light rounded mt-4">
+                    <h3 class="h6 fw-bold mb-3">Booking Summary</h3>
+                    <div class="d-flex justify-content-between mb-2">
+                      <span>Room Type:</span>
+                      <span>Deluxe Room</span>
+                    </div>
+                    <div class="d-flex justify-content-between mb-2">
+                      <span>Check In:</span>
+                      <span id="summary-check-in">Not selected</span>
+                    </div>
+                    <div class="d-flex justify-content-between mb-2">
+                      <span>Check Out:</span>
+                      <span id="summary-check-out">Not selected</span>
+                    </div>
+                    <div class="d-flex justify-content-between mb-2">
+                      <span>Guests:</span>
+                      <span>2</span>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between mb-2">
+                      <span>Room Rate:</span>
+                      <span>$199 x 3 nights</span>
+                    </div>
+                    <div class="d-flex justify-content-between mb-2">
+                      <span>Taxes & Fees:</span>
+                      <span>$89.55</span>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between fw-bold">
+                      <span>Total:</span>
+                      <span>$686.55</span>
+                    </div>
+                  </div>
+                  
+                  <div class="d-flex justify-content-between mt-4">
+                    <button type="button" class="btn btn-outline-secondary prev-step" data-step="3">
+                      Back
+                    </button>
+                    <button type="button" class="btn btn-primary next-step" data-step="3">
+                      Complete Booking <i class="fas fa-arrow-right ms-2"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Step 4: Confirmation -->
+            <div class="booking-step-content" id="booking-step-4">
+              <div class="card">
+                <div class="card-body p-4 text-center">
+                  <div class="confirmation-icon mb-4">
+                    <i class="fas fa-check-circle"></i>
+                  </div>
+                  
+                  <h2 class="card-title h4 fw-bold mb-3">Booking Confirmed!</h2>
+                  <p class="text-muted mb-4">
+                    Thank you for your booking. A confirmation has been sent to your email.
+                  </p>
+                  
+                  <div class="booking-details p-4 bg-light rounded mx-auto mb-4" style="max-width: 500px;">
+                    <h3 class="h6 fw-bold mb-3 text-start">Booking Details</h3>
+                    <div class="row g-2 text-start">
+                      <div class="col-6 text-muted">Booking Reference:</div>
+                      <div class="col-6 fw-medium text-end">LH-12345678</div>
+                      
+                      <div class="col-6 text-muted">Room Type:</div>
+                      <div class="col-6 fw-medium text-end">Deluxe Room</div>
+                      
+                      <div class="col-6 text-muted">Check In:</div>
+                      <div class="col-6 fw-medium text-end" id="confirmation-check-in">Not selected</div>
+                      
+                      <div class="col-6 text-muted">Check Out:</div>
+                      <div class="col-6 fw-medium text-end" id="confirmation-check-out">Not selected</div>
+                      
+                      <div class="col-6 text-muted">Guests:</div>
+                      <div class="col-6 fw-medium text-end">2</div>
+                      
+                      <div class="col-6 text-muted">Total Amount:</div>
+                      <div class="col-6 fw-medium text-end">$686.55</div>
+                    </div>
+                  </div>
+                  
+                  <p class="text-muted mb-4">
+                    Need to make changes to your booking? Contact our customer service.
+                  </p>
+                  
+                  <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+                    <button type="button" class="btn btn-outline-primary">Print Confirmation</button>
+                    <a href="index.html" class="btn btn-primary">Return to Home</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-dark text-white pt-5 pb-3">
+    <div class="container">
+      <div class="row g-4">
+        <!-- About -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="fw-bold mb-3">Luxury Haven</h5>
+          <p class="text-muted">
+            Experience unparalleled luxury and comfort at our award-winning hotel. 
+            We are committed to providing exceptional service and creating memorable experiences.
+          </p>
+          <div class="social-links mt-3">
+            <a href="#" class="text-muted me-2"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-muted me-2"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-muted me-2"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-muted"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        
+        <!-- Quick Links -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="fw-bold mb-3">Quick Links</h5>
+          <ul class="list-unstyled footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="rooms.html">Rooms & Suites</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="booking.html">Book Now</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <!-- Contact -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="fw-bold mb-3">Contact</h5>
+          <ul class="list-unstyled text-muted">
+            <li class="mb-2">123 Luxury Avenue, City Center</li>
+            <li class="mb-2">State 12345, United States</li>
+            <li class="mb-2">Phone: +1 (555) 123-4567</li>
+            <li>Email: info@luxuryhaven.com</li>
+          </ul>
+        </div>
+        
+        <!-- Newsletter -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="fw-bold mb-3">Newsletter</h5>
+          <p class="text-muted">Subscribe to our newsletter for exclusive offers and updates.</p>
+          <div class="input-group mt-3">
+            <input type="email" class="form-control" placeholder="Your email">
+            <button class="btn btn-primary" type="button">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <hr class="my-4 bg-secondary">
+      
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="small text-muted mb-0">
+            &copy; <script>document.write(new Date().getFullYear())</script> Luxury Haven Hotel. All rights reserved.
+          </p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <ul class="list-inline small mb-0">
+            <li class="list-inline-item"><a href="#" class="text-muted">Privacy Policy</a></li>
+            <li class="list-inline-item"><a href="#" class="text-muted">Terms of Service</a></li>
+            <li class="list-inline-item"><a href="#" class="text-muted">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <a href="#" class="back-to-top" id="backToTop">
+    <i class="fas fa-chevron-up"></i>
+  </a>
+
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/script.js"></script>
+</body>
+</html>

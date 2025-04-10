@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luxury Haven Hotel</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Luxury Haven</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="rooms.html">Rooms</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="booking.html">Book Now</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item d-none d-lg-block ms-3">
+              <a class="btn btn-primary" href="booking.html">Book Now</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Slider -->
+  <section class="hero-slider">
+    <div class="carousel slide" data-bs-ride="carousel" id="heroCarousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="hero-slide" style="background-image: url('a106c7e0256afac9d2e4295c42bf0163.jpg'); " style="height: 550px; width: 100%;">
+            <div class="container">
+              <div class="hero-content text-center">
+                <h1 class="display-4 fw-bold text-white animate__animated animate__fadeInDown">Experience Luxury Like Never Before</h1>
+                <p class="lead text-white mb-4 animate__animated animate__fadeInUp animate__delay-1s">Indulge in the ultimate luxury experience at our award-winning hotel</p>
+                <a href="booking.html" class="btn btn-primary btn-lg animate__animated animate__fadeInUp animate__delay-2s">
+                  Book Your Stay <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="hero-slide" style="background-image: url('540670585f62ce43dc04a6a738efc27f.jpg');">
+            <div class="container">
+              <div class="hero-content text-center">
+                <h1 class="display-4 fw-bold text-white animate__animated animate__fadeInDown">Exquisite Dining Experience</h1>
+                <p class="lead text-white mb-4 animate__animated animate__fadeInUp animate__delay-1s">Savor culinary delights prepared by our world-class chefs</p>
+                <a href="services.html" class="btn btn-primary btn-lg animate__animated animate__fadeInUp animate__delay-2s">
+                  Explore Dining <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="hero-slide" style="background-image: url('8eef2548e52efcf0a89edcdecba4f175.jpg');">
+            <div class="container">
+              <div class="hero-content text-center">
+                <h1 class="display-4 fw-bold text-white animate__animated animate__fadeInDown">Relax and Rejuvenate</h1>
+                <p class="lead text-white mb-4 animate__animated animate__fadeInUp animate__delay-1s">Unwind in our premium spa and wellness facilities</p>
+                <a href="services.html" class="btn btn-primary btn-lg animate__animated animate__fadeInUp animate__delay-2s">
+                  View Services <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Welcome Section -->
+  <section class="welcome-section py-5 py-md-6 reveal">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <h2 class="display-5 fw-bold mb-3">Welcome to <span class="text-primary">Luxury Haven</span></h2>
+          <div class="accent-line mb-4"></div>
+          <p class="text-muted mb-4">
+            Experience unparalleled luxury and comfort at our award-winning hotel. 
+            Nestled in the heart of the city, Luxury Haven offers a perfect blend of 
+            modern amenities and traditional hospitality.
+          </p>
+          <p class="text-muted mb-4">
+            From our exquisite dining options to our state-of-the-art spa facilities, 
+            every aspect of your stay is designed to provide an unforgettable experience.
+          </p>
+          <a href="about.html" class="btn btn-primary">
+            Discover More <i class="fas fa-arrow-right ms-2"></i>
+          </a>
+        </div>
+        <div class="col-lg-6">
+          <div class="row g-3">
+            <div class="col-6">
+              <img src="https://placehold.co/600x400" alt="Hotel Lobby" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-6 pt-5">
+              <img src="https://placehold.co/600x400" alt="Hotel Pool" class="img-fluid rounded shadow">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Rooms -->
+  <section class="featured-rooms py-5 py-md-6 bg-light reveal">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="display-5 fw-bold mb-3">Our Luxury Rooms</h2>
+        <div class="accent-line mx-auto mb-4"></div>
+        <p class="text-muted mx-auto" style="max-width: 700px;">
+          Choose from our selection of meticulously designed rooms and suites, 
+          each offering a unique blend of comfort and elegance.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Room Card 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card room-card h-100">
+            <div class="position-relative overflow-hidden">
+              <img src="https://placehold.co/600x400" class="card-img-top" alt="Deluxe Room">
+              <div class="room-price">$199/night</div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title h5 fw-bold">Deluxe Room</h3>
+              <ul class="room-features">
+                <li><i class="fas fa-check text-primary me-2"></i> King Size Bed</li>
+                <li><i class="fas fa-check text-primary me-2"></i> City View</li>
+                <li><i class="fas fa-check text-primary me-2"></i> Free WiFi</li>
+                <li><i class="fas fa-check text-primary me-2"></i> Breakfast Included</li>
+              </ul>
+              <div class="d-flex justify-content-between mt-4">
+                <a href="rooms.html" class="btn btn-outline-primary btn-sm">View Details</a>
+                <a href="booking.html?room=deluxe" class="btn btn-primary btn-sm">
+                  Book Now <i class="fas fa-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Room Card 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card room-card h-100">
+            <div class="position-relative overflow-hidden">
+              <img src="https://placehold.co/600x400" class="card-img-top" alt="Executive Suite">
+              <div class="room-price">$299/night</div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title h5 fw-bold">Executive Suite</h3>
+              <ul class="room-features">
+                <li><i class="fas fa-check text-primary me-2"></i> King Size Bed</li>
+                <li><i class="fas fa-check text-primary me-2"></i> Ocean View</li>
+                <li><i class="fas fa-check text-primary me-2"></i> Free WiFi</li>
+                <li><i class="fas fa-check text-primary me-2"></i> Breakfast Included</li>
+              </ul>
+              <div class="d-flex justify-content-between mt-4">
+                <a href="rooms.html" class="btn btn-outline-primary btn-sm">View Details</a>
+                <a href="booking.html?room=executive" class="btn btn-primary btn-sm">
+                  Book Now <i class="fas fa-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Room Card 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card room-card h-100">
+            <div class="position-relative overflow-hidden">
+              <img src="https://placehold.co/600x400" class="card-img-top" alt="Presidential Suite">
+              <div class="room-price">$499/night</div>
+            </div>
+            <div class="card-body">
+              <h3 class="card-title h5 fw-bold">Presidential Suite</h3>
+              <ul class="room-features">
+                <li><i class="fas fa-check text-primary me-2"></i> King Size Bed</li>
+                <li><i class="fas fa-check text-primary me-2"></i> Panoramic View</li>
+                <li><i class="fas fa-check text-primary me-2"></i> Free WiFi</li>
+                <li><i class="fas fa-check text-primary me-2"></i> All Inclusive</li>
+              </ul>
+              <div class="d-flex justify-content-between mt-4">
+                <a href="rooms.html" class="btn btn-outline-primary btn-sm">View Details</a>
+                <a href="booking.html?room=presidential" class="btn btn-primary btn-sm">
+                  Book Now <i class="fas fa-arrow-right ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-5">
+        <a href="rooms.html" class="btn btn-outline-primary">
+          View All Rooms <i class="fas fa-arrow-right ms-2"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services-section py-5 py-md-6 reveal">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="display-5 fw-bold mb-3">Our Services</h2>
+        <div class="accent-line mx-auto mb-4"></div>
+        <p class="text-muted mx-auto" style="max-width: 700px;">
+          We offer a wide range of services to make your stay comfortable and memorable.
+        </p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Service 1 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card service-card h-100">
+            <div class="card-body text-center">
+              <div class="service-icon">
+                <i class="fas fa-utensils"></i>
+              </div>
+              <h3 class="card-title h5 fw-bold mt-4">Fine Dining</h3>
+              <p class="card-text text-muted">
+                Experience culinary excellence at our award-winning restaurants.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card service-card h-100">
+            <div class="card-body text-center">
+              <div class="service-icon">
+                <i class="fas fa-wifi"></i>
+              </div>
+              <h3 class="card-title h5 fw-bold mt-4">Free WiFi</h3>
+              <p class="card-text text-muted">
+                Stay connected with high-speed internet throughout the hotel.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card service-card h-100">
+            <div class="card-body text-center">
+              <div class="service-icon">
+                <i class="fas fa-car"></i>
+              </div>
+              <h3 class="card-title h5 fw-bold mt-4">Airport Pickup</h3>
+              <p class="card-text text-muted">
+                Enjoy hassle-free transportation from the airport to our hotel.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card service-card h-100">
+            <div class="card-body text-center">
+              <div class="service-icon">
+                <i class="fas fa-spa"></i>
+              </div>
+              <h3 class="card-title h5 fw-bold mt-4">Spa & Wellness</h3>
+              <p class="card-text text-muted">
+                Relax and rejuvenate with our premium spa and wellness services.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-5">
+        <a href="services.html" class="btn btn-outline-primary">
+          Explore All Services <i class="fas fa-arrow-right ms-2"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials-section py-5 py-md-6 bg-light reveal">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="display-5 fw-bold mb-3">What Our Guests Say</h2>
+        <div class="accent-line mx-auto mb-4"></div>
+      </div>
+
+      <div class="row">
+        <div class="col-12">
+          <div class="testimonial-slider">
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <!-- Testimonial 1 -->
+                <div class="carousel-item active">
+                  <div class="row justify-content-center">
+                    <div class="col-md-8 col-lg-6">
+                      <div class="card testimonial-card">
+                        <div class="card-body text-center">
+                          <div class="testimonial-rating mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                          </div>
+                          <p class="card-text testimonial-text">
+                            "The service at Luxury Haven is exceptional. The staff went above and beyond to make my business trip comfortable and productive. The rooms are spacious and well-equipped for work."
+                          </p>
+                          <div class="testimonial-author mt-4">
+                            <img src="https://placehold.co/100" class="rounded-circle" alt="John Smith">
+                            <h5 class="mt-3 mb-0">John Smith</h5>
+                            <p class="text-muted small">Business Traveler</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="carousel-item">
+                  <div class="row justify-content-center">
+                    <div class="col-md-8 col-lg-6">
+                      <div class="card testimonial-card">
+                        <div class="card-body text-center">
+                          <div class="testimonial-rating mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                          </div>
+                          <p class="card-text testimonial-text">
+                            "We chose Luxury Haven for our honeymoon and it was the best decision. The romantic atmosphere, beautiful views, and attentive service made our stay truly special."
+                          </p>
+                          <div class="testimonial-author mt-4">
+                            <img src="https://placehold.co/100" class="rounded-circle" alt="Emily Johnson">
+                            <h5 class="mt-3 mb-0">Emily Johnson</h5>
+                            <p class="text-muted small">Honeymoon Couple</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="carousel-item">
+                  <div class="row justify-content-center">
+                    <div class="col-md-8 col-lg-6">
+                      <div class="card testimonial-card">
+                        <div class="card-body text-center">
+                          <div class="testimonial-rating mb-3">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="far fa-star text-warning"></i>
+                          </div>
+                          <p class="card-text testimonial-text">
+                            "Our family had an amazing time at Luxury Haven. The kids loved the pool, and we appreciated the spacious family room. The staff was incredibly accommodating to our needs."
+                          </p>
+                          <div class="testimonial-author mt-4">
+                            <img src="https://placehold.co/100" class="rounded-circle" alt="Michael Brown">
+                            <h5 class="mt-3 mb-0">Michael Brown</h5>
+                            <p class="text-muted small">Family Vacation</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel-indicators testimonial-indicators">
+                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta-section py-5 py-md-6 bg-primary text-white reveal">
+    <div class="container text-center">
+      <h2 class="display-5 fw-bold mb-3">Ready for an Unforgettable Stay?</h2>
+      <p class="lead mb-4">
+        Book your room now and experience luxury like never before. Special offers available for early bookings.
+      </p>
+      <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+        <a href="rooms.html" class="btn btn-light btn-lg">Explore Rooms</a>
+        <a href="booking.html" class="btn btn-outline-light btn-lg">
+          Book Now <i class="fas fa-arrow-right ms-2"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Info -->
+  <section class="contact-info-section py-5 reveal">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4 text-center">
+          <div class="contact-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <h3 class="h5 fw-bold mt-3">Call Us</h3>
+          <p class="text-muted">+1 (555) 123-4567</p>
+        </div>
+        
+        <div class="col-md-4 text-center">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <h3 class="h5 fw-bold mt-3">Email Us</h3>
+          <p class="text-muted">info@luxuryhaven.com</p>
+        </div>
+        
+        <div class="col-md-4 text-center">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <h3 class="h5 fw-bold mt-3">Visit Us</h3>
+          <p class="text-muted">123 Luxury Avenue, City Center</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-dark text-white pt-5 pb-3">
+    <div class="container">
+      <div class="row g-4">
+        <!-- About -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="fw-bold mb-3">Luxury Haven</h5>
+          <p class="text-muted">
+            Experience unparalleled luxury and comfort at our award-winning hotel. 
+            We are committed to providing exceptional service and creating memorable experiences.
+          </p>
+          <div class="social-links mt-3">
+            <a href="#" class="text-muted me-2"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-muted me-2"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-muted me-2"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-muted"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        
+        <!-- Quick Links -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="fw-bold mb-3">Quick Links</h5>
+          <ul class="list-unstyled footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="rooms.html">Rooms & Suites</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="booking.html">Book Now</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <!-- Contact -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="fw-bold mb-3">Contact</h5>
+          <ul class="list-unstyled text-muted">
+            <li class="mb-2">123 Luxury Avenue, City Center</li>
+            <li class="mb-2">State 12345, United States</li>
+            <li class="mb-2">Phone: +1 (555) 123-4567</li>
+            <li>Email: info@luxuryhaven.com</li>
+          </ul>
+        </div>
+        
+        <!-- Newsletter -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="fw-bold mb-3">Newsletter</h5>
+          <p class="text-muted">Subscribe to our newsletter for exclusive offers and updates.</p>
+          <div class="input-group mt-3">
+            <input type="email" class="form-control" placeholder="Your email">
+            <button class="btn btn-primary" type="button">
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <hr class="my-4 bg-secondary">
+      
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start">
+          <p class="small text-muted mb-0">
+            &copy; <script>document.write(new Date().getFullYear())</script> Luxury Haven Hotel. All rights reserved.
+          </p>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <ul class="list-inline small mb-0">
+            <li class="list-inline-item"><a href="#" class="text-muted">Privacy Policy</a></li>
+            <li class="list-inline-item"><a href="#" class="text-muted">Terms of Service</a></li>
+            <li class="list-inline-item"><a href="#" class="text-muted">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <a href="#" class="back-to-top" id="backToTop">
+    <i class="fas fa-chevron-up"></i>
+  </a>
+
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/script.js"></script>
+</body>
+</html>

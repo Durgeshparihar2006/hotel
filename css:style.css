@@ -1,0 +1,568 @@
+/* 
+* Luxury Haven Hotel - Custom CSS
+* This file contains all custom styling for the hotel website
+*/
+
+/* ===== GENERAL STYLES ===== */
+:root {
+    --primary: #e67e22;
+    --primary-dark: #d35400;
+    --secondary: #2c3e50;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --text-muted: #6c757d;
+    --transition: all 0.3s ease;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--dark);
+    overflow-x: hidden;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+  }
+  
+  a {
+    text-decoration: none;
+    transition: var(--transition);
+  }
+  
+  .btn {
+    border-radius: 0;
+    padding: 0.625rem 1.5rem;
+    font-weight: 500;
+    transition: var(--transition);
+  }
+  
+  .btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+  }
+  
+  .btn-primary:hover, 
+  .btn-primary:focus {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+  }
+  
+  .btn-outline-primary {
+    color: var(--primary);
+    border-color: var(--primary);
+  }
+  
+  .btn-outline-primary:hover {
+    background-color: var(--primary);
+    border-color: var(--primary);
+  }
+  
+  .text-primary {
+    color: var(--primary) !important;
+  }
+  
+  .bg-primary {
+    background-color: var(--primary) !important;
+  }
+  
+  .accent-line {
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary);
+  }
+  
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+  }
+  
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* ===== HEADER & NAVIGATION ===== */
+  header {
+    transition: var(--transition);
+  }
+  
+  .navbar {
+    padding: 1rem 0;
+    transition: var(--transition);
+  }
+  
+  .navbar-dark {
+    background-color: transparent;
+  }
+  
+  .navbar-dark.scrolled {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 0.5rem 0;
+  }
+  
+  .navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--primary) !important;
+  }
+  
+  .nav-link {
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    position: relative;
+  }
+  
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary);
+    transition: var(--transition);
+    transform: translateX(-50%);
+  }
+  
+  .nav-link.active::after,
+  .nav-link:hover::after {
+    width: 70%;
+  }
+  
+  /* ===== HERO SLIDER ===== */
+  .hero-slider {
+    height: 100vh;
+    position: relative;
+  }
+  
+  .hero-slide {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  
+  .hero-slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .hero-content {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 1;
+    padding: 0 15px;
+  }
+  
+  .carousel-indicators {
+    bottom: 30px;
+  }
+  
+  .carousel-indicators button {
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 50%;
+    margin: 0 5px !important;
+  }
+  
+  /* ===== PAGE HEADER ===== */
+  .page-header {
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .page-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .page-header-content {
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* ===== ROOM CARDS ===== */
+  .room-card {
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+  }
+  
+  .room-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  .room-price {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: var(--primary);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.875rem;
+  }
+  
+  .room-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+  }
+  
+  .room-features li {
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+  }
+  
+  /* ===== ROOM LIST CARDS ===== */
+  .room-list-card {
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+  }
+  
+  .room-list-card:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* ===== SERVICE CARDS ===== */
+  .service-card {
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  .service-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: rgba(230, 126, 34, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  
+  .service-icon i {
+    font-size: 1.75rem;
+    color: var(--primary);
+  }
+  
+  .service-detail-card {
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+  }
+  
+  .service-detail-card:hover {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* ===== TESTIMONIALS ===== */
+  .testimonial-card {
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  .testimonial-text {
+    font-style: italic;
+    position: relative;
+    padding: 0 20px;
+  }
+  
+  .testimonial-text::before,
+  .testimonial-text::after {
+    content: '"';
+    font-size: 2rem;
+    color: var(--primary);
+    position: absolute;
+    opacity: 0.3;
+  }
+  
+  .testimonial-text::before {
+    top: -10px;
+    left: 0;
+  }
+  
+  .testimonial-text::after {
+    bottom: -20px;
+    right: 0;
+  }
+  
+  .testimonial-author img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    margin: 0 auto;
+  }
+  
+  .testimonial-indicators {
+    position: static;
+    margin-top: 2rem;
+  }
+  
+  .testimonial-indicators button {
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 50%;
+    background-color: #ddd;
+    margin: 0 5px !important;
+  }
+  
+  .testimonial-indicators button.active {
+    background-color: var(--primary);
+  }
+  
+  /* ===== CONTACT INFO ===== */
+  .contact-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(230, 126, 34, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  
+  .contact-icon i {
+    font-size: 1.25rem;
+    color: var(--primary);
+  }
+  
+  /* ===== BOOKING STEPS ===== */
+  .booking-step {
+    position: relative;
+  }
+  
+  .step-number {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #e9ecef;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+    font-weight: 600;
+    transition: var(--transition);
+  }
+  
+  .booking-step.active .step-number {
+    background-color: var(--primary);
+    color: white;
+  }
+  
+  .step-label {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    transition: var(--transition);
+  }
+  
+  .booking-step.active .step-label {
+    color: var(--primary);
+    font-weight: 600;
+  }
+  
+  .booking-step-content {
+    display: none;
+  }
+  
+  .booking-step-content.active {
+    display: block;
+  }
+  
+  .confirmation-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgba(230, 126, 34, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  
+  .confirmation-icon i {
+    font-size: 2.5rem;
+    color: var(--primary);
+  }
+  
+  /* ===== FOOTER ===== */
+  .footer {
+    background-color: #1a1a1a;
+  }
+  
+  .footer-links li {
+    margin-bottom: 0.75rem;
+  }
+  
+  .footer-links a {
+    color: #adb5bd;
+    transition: var(--transition);
+  }
+  
+  .footer-links a:hover {
+    color: var(--primary);
+    padding-left: 5px;
+  }
+  
+  .social-links a {
+    transition: var(--transition);
+  }
+  
+  .social-links a:hover {
+    color: var(--primary) !important;
+  }
+  
+  /* ===== BACK TO TOP BUTTON ===== */
+  .back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+    z-index: 99;
+  }
+  
+  .back-to-top.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .back-to-top:hover {
+    background-color: var(--primary-dark);
+    color: white;
+  }
+  
+  /* ===== RESPONSIVE STYLES ===== */
+  @media (max-width: 991.98px) {
+    .hero-slider, .hero-slide {
+      height: 80vh;
+    }
+    
+    .hero-content h1 {
+      font-size: 2.5rem;
+    }
+  }
+  
+  @media (max-width: 767.98px) {
+    .hero-slider, .hero-slide {
+      height: 70vh;
+    }
+    
+    .hero-content h1 {
+      font-size: 2rem;
+    }
+    
+    .page-header {
+      height: 300px;
+    }
+    
+    .accent-line {
+      width: 60px;
+    }
+    
+    .py-md-6 {
+      padding-top: 3rem !important;
+      padding-bottom: 3rem !important;
+    }
+  }
+  
+  @media (max-width: 575.98px) {
+    .hero-slider, .hero-slide {
+      height: 60vh;
+    }
+    
+    .hero-content h1 {
+      font-size: 1.75rem;
+    }
+    
+    .page-header {
+      height: 250px;
+    }
+    
+    .booking-step .step-label {
+      font-size: 0.75rem;
+    }
+  }
+  
+  /* ===== ANIMATIONS ===== */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate__animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+  
+  .animate__fadeInDown {
+    animation-name: fadeInDown;
+  }
+  
+  .animate__fadeInUp {
+    animation-name: fadeInUp;
+  }
+  
+  .animate__delay-1s {
+    animation-delay: 1s;
+  }
+  
+  .animate__delay-2s {
+    animation-delay: 2s;
+  }
+  
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
